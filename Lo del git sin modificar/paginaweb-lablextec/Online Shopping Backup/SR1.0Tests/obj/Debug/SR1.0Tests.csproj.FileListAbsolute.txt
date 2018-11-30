@@ -1,0 +1,10 @@
+C:\Users\Ximena\Documents\I SEMESTRE 2018\PROYECTO\paginaweb-lablextec\Online Shopping Backup\SR1.0Tests\bin\Debug\SR1.0Tests.dll
+C:\Users\Ximena\Documents\I SEMESTRE 2018\PROYECTO\paginaweb-lablextec\Online Shopping Backup\SR1.0Tests\bin\Debug\SR1.0Tests.pdb
+C:\Users\Ximena\Documents\I SEMESTRE 2018\PROYECTO\paginaweb-lablextec\Online Shopping Backup\SR1.0Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Ximena\Documents\I SEMESTRE 2018\PROYECTO\paginaweb-lablextec\Online Shopping Backup\SR1.0Tests\bin\Debug\Online Shopping Backup.dll
+C:\Users\Ximena\Documents\I SEMESTRE 2018\PROYECTO\paginaweb-lablextec\Online Shopping Backup\SR1.0Tests\bin\Debug\Online Shopping Backup.pdb
+C:\Users\Ximena\Documents\I SEMESTRE 2018\PROYECTO\paginaweb-lablextec\Online Shopping Backup\SR1.0Tests\bin\Debug\Online Shopping Backup.dll.config
+C:\Users\Ximena\Documents\I SEMESTRE 2018\PROYECTO\paginaweb-lablextec\Online Shopping Backup\SR1.0Tests\obj\Debug\SR1.0Tests.csprojResolveAssemblyReference.cache
+C:\Users\Ximena\Documents\I SEMESTRE 2018\PROYECTO\paginaweb-lablextec\Online Shopping Backup\SR1.0Tests\obj\Debug\SR1.0Tests.csproj.CoreCompileInputs.cache
+C:\Users\Ximena\Documents\I SEMESTRE 2018\PROYECTO\paginaweb-lablextec\Online Shopping Backup\SR1.0Tests\obj\Debug\SR1.0Tests.dll
+C:\Users\Ximena\Documents\I SEMESTRE 2018\PROYECTO\paginaweb-lablextec\Online Shopping Backup\SR1.0Tests\obj\Debug\SR1.0Tests.pdb

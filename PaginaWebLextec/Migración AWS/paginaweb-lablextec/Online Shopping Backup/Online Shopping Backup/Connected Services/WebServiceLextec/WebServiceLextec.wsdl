@@ -1,0 +1,1750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="Desmatricular_Usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sessionID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Desmatricular_UsuarioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllUsers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllUsersResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllClases">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllClasesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllClasesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllTipos">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllTiposResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllTiposResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIdAdministradorFromNombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIdAdministradorFromNombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIdAdministradorFromNombreResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIdClaseFromNombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIdClaseFromNombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIdClaseFromNombreResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIdTipoFromNombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIdTipoFromNombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIdTipoFromNombreResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Matricular_Usuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sessionID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Matricular_UsuarioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SRSP_ActualizarAdministrador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="last_name1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="last_name2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="admin" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_ActualizarAdministradorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_ActualizarAdministradorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_ActualizarExperimento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="publicName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="note" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="place" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isOpen" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="classID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="typeID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isCompleted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="AdminID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_ActualizarExperimentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_ActualizarExperimentoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_ActualizarResultado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="resultID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sessionID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="size" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_ActualizarResultadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_ActualizarResultadoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_ActualizarSesion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sessionID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="startTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="full" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="capacity" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_ActualizarSesionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_ActualizarSesionResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_ActualizarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="speciality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nationality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="careerLevel" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="gender" type="s1:char" />
+            <s:element minOccurs="1" maxOccurs="1" name="isStudent" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="birthDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="careerYear" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_ActualizarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_ActualizarUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_EliminarAdministrador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_EliminarAdministradorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_EliminarAdministradorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_EliminarExperimento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="experimentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_EliminarExperimentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_EliminarExperimentoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_EliminarResultado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="resultID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_EliminarResultadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_EliminarResultadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_EliminarSesion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sesssionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_EliminarSesionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_EliminarSesionResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_EliminarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_EliminarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_EliminarUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_FiltrarUsuariosLike">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="like" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="speciality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nationality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="careerLevel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="notExperiment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="student" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startQuatity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endQuantity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startRegisterDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endRegisterDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_FiltrarUsuariosLikeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_FiltrarUsuariosLikeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarAdministrador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="last_name1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="last_name2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="admin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="real_admin" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarAdministradorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_InsertarAdministradorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarClase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarClaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_InsertarClaseResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarExperimento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="publicName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="note" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="place" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isOpen" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="classID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="typeID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isCompleted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="AdminID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarExperimentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_InsertarExperimentoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarResultado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sessionID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="size" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarResultadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_InsertarResultadoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarSesion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="experimentID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="startTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="full" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="capacity" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarSesionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_InsertarSesionResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarSesionxUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="sessionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarSesionxUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_InsertarSesionxUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarTipo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarTipoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_InsertarTipoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="speciality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nationality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="careerLevel" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="gender" type="s1:char" />
+            <s:element minOccurs="1" maxOccurs="1" name="isStudent" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="birthDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="careerYear" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_InsertarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SRSP_InsertarUsuarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_SeleccionarInvitacionesXCorreo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_SeleccionarInvitacionesXCorreoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_SeleccionarInvitacionesXCorreoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_SeleccionarInvitacionesXCorreoValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SRSP_SeleccionarInvitacionesXCorreoValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_SeleccionarInvitacionesXCorreoValuesResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_SelectInvitados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="experimentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_SelectInvitadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_SelectInvitadosResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_SesionExportarUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sessionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_SesionExportarUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_SesionExportarUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VerResultado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="resultID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VerResultadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_VerResultadoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VerResultadoxSesion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sessionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VerResultadoxSesionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_VerResultadoxSesionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VerificarAdministrador">
+        <s:complexType />
+      </s:element>
+      <s:element name="SRSP_VerificarAdministradorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_VerificarAdministradorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VerSesionesdeExperimento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="experimentID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VerSesionesdeExperimentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_VerSesionesdeExperimentoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VerUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VerUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_VerUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VisualizarExperimento5Param">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idExperimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idTipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idClase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaInicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fechaFinal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SRSP_VisualizarExperimento5ParamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SRSP_VisualizarExperimento5ParamResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Desmatricular_UsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:Desmatricular_Usuario" />
+  </wsdl:message>
+  <wsdl:message name="Desmatricular_UsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:Desmatricular_UsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllClasesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllClases" />
+  </wsdl:message>
+  <wsdl:message name="GetAllClasesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllClasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllTiposSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllTipos" />
+  </wsdl:message>
+  <wsdl:message name="GetAllTiposSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllTiposResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIdAdministradorFromNombreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIdAdministradorFromNombre" />
+  </wsdl:message>
+  <wsdl:message name="GetIdAdministradorFromNombreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIdAdministradorFromNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIdClaseFromNombreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIdClaseFromNombre" />
+  </wsdl:message>
+  <wsdl:message name="GetIdClaseFromNombreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIdClaseFromNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIdTipoFromNombreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIdTipoFromNombre" />
+  </wsdl:message>
+  <wsdl:message name="GetIdTipoFromNombreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIdTipoFromNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="Matricular_UsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:Matricular_Usuario" />
+  </wsdl:message>
+  <wsdl:message name="Matricular_UsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:Matricular_UsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_ActualizarAdministradorSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_ActualizarAdministrador" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_ActualizarAdministradorSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_ActualizarAdministradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_ActualizarExperimentoSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_ActualizarExperimento" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_ActualizarExperimentoSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_ActualizarExperimentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_ActualizarResultadoSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_ActualizarResultado" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_ActualizarResultadoSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_ActualizarResultadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_ActualizarSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_ActualizarSesion" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_ActualizarSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_ActualizarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_ActualizarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_ActualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_ActualizarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_ActualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_EliminarAdministradorSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_EliminarAdministrador" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_EliminarAdministradorSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_EliminarAdministradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_EliminarExperimentoSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_EliminarExperimento" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_EliminarExperimentoSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_EliminarExperimentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_EliminarResultadoSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_EliminarResultado" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_EliminarResultadoSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_EliminarResultadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_EliminarSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_EliminarSesion" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_EliminarSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_EliminarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_EliminarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_EliminarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_EliminarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_EliminarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_FiltrarUsuariosLikeSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_FiltrarUsuariosLike" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_FiltrarUsuariosLikeSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_FiltrarUsuariosLikeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarAdministradorSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarAdministrador" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarAdministradorSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarAdministradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarClaseSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarClase" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarClaseSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarClaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarExperimentoSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarExperimento" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarExperimentoSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarExperimentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarResultadoSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarResultado" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarResultadoSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarResultadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarSesion" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarSesionxUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarSesionxUsuario" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarSesionxUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarSesionxUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarTipoSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarTipo" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarTipoSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_InsertarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_InsertarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_SeleccionarInvitacionesXCorreoSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_SeleccionarInvitacionesXCorreo" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_SeleccionarInvitacionesXCorreoSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_SeleccionarInvitacionesXCorreoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_SeleccionarInvitacionesXCorreoValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_SeleccionarInvitacionesXCorreoValues" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_SeleccionarInvitacionesXCorreoValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_SeleccionarInvitacionesXCorreoValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_SelectInvitadosSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_SelectInvitados" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_SelectInvitadosSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_SelectInvitadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_SesionExportarUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_SesionExportarUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_SesionExportarUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_SesionExportarUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VerResultadoSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_VerResultado" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VerResultadoSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_VerResultadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VerResultadoxSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_VerResultadoxSesion" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VerResultadoxSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_VerResultadoxSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VerificarAdministradorSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_VerificarAdministrador" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VerificarAdministradorSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_VerificarAdministradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VerSesionesdeExperimentoSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_VerSesionesdeExperimento" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VerSesionesdeExperimentoSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_VerSesionesdeExperimentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VerUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_VerUsuario" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VerUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_VerUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VisualizarExperimento5ParamSoapIn">
+    <wsdl:part name="parameters" element="tns:SRSP_VisualizarExperimento5Param" />
+  </wsdl:message>
+  <wsdl:message name="SRSP_VisualizarExperimento5ParamSoapOut">
+    <wsdl:part name="parameters" element="tns:SRSP_VisualizarExperimento5ParamResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceLextecSoap">
+    <wsdl:operation name="Desmatricular_Usuario">
+      <wsdl:input message="tns:Desmatricular_UsuarioSoapIn" />
+      <wsdl:output message="tns:Desmatricular_UsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input message="tns:GetAllUsersSoapIn" />
+      <wsdl:output message="tns:GetAllUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClases">
+      <wsdl:input message="tns:GetAllClasesSoapIn" />
+      <wsdl:output message="tns:GetAllClasesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTipos">
+      <wsdl:input message="tns:GetAllTiposSoapIn" />
+      <wsdl:output message="tns:GetAllTiposSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAdministradorFromNombre">
+      <wsdl:input message="tns:GetIdAdministradorFromNombreSoapIn" />
+      <wsdl:output message="tns:GetIdAdministradorFromNombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdClaseFromNombre">
+      <wsdl:input message="tns:GetIdClaseFromNombreSoapIn" />
+      <wsdl:output message="tns:GetIdClaseFromNombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdTipoFromNombre">
+      <wsdl:input message="tns:GetIdTipoFromNombreSoapIn" />
+      <wsdl:output message="tns:GetIdTipoFromNombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Matricular_Usuario">
+      <wsdl:input message="tns:Matricular_UsuarioSoapIn" />
+      <wsdl:output message="tns:Matricular_UsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarAdministrador">
+      <wsdl:input message="tns:SRSP_ActualizarAdministradorSoapIn" />
+      <wsdl:output message="tns:SRSP_ActualizarAdministradorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarExperimento">
+      <wsdl:input message="tns:SRSP_ActualizarExperimentoSoapIn" />
+      <wsdl:output message="tns:SRSP_ActualizarExperimentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarResultado">
+      <wsdl:input message="tns:SRSP_ActualizarResultadoSoapIn" />
+      <wsdl:output message="tns:SRSP_ActualizarResultadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarSesion">
+      <wsdl:input message="tns:SRSP_ActualizarSesionSoapIn" />
+      <wsdl:output message="tns:SRSP_ActualizarSesionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarUsuario">
+      <wsdl:input message="tns:SRSP_ActualizarUsuarioSoapIn" />
+      <wsdl:output message="tns:SRSP_ActualizarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarAdministrador">
+      <wsdl:input message="tns:SRSP_EliminarAdministradorSoapIn" />
+      <wsdl:output message="tns:SRSP_EliminarAdministradorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarExperimento">
+      <wsdl:input message="tns:SRSP_EliminarExperimentoSoapIn" />
+      <wsdl:output message="tns:SRSP_EliminarExperimentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarResultado">
+      <wsdl:input message="tns:SRSP_EliminarResultadoSoapIn" />
+      <wsdl:output message="tns:SRSP_EliminarResultadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarSesion">
+      <wsdl:input message="tns:SRSP_EliminarSesionSoapIn" />
+      <wsdl:output message="tns:SRSP_EliminarSesionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarUsuario">
+      <wsdl:input message="tns:SRSP_EliminarUsuarioSoapIn" />
+      <wsdl:output message="tns:SRSP_EliminarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_FiltrarUsuariosLike">
+      <wsdl:input message="tns:SRSP_FiltrarUsuariosLikeSoapIn" />
+      <wsdl:output message="tns:SRSP_FiltrarUsuariosLikeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarAdministrador">
+      <wsdl:input message="tns:SRSP_InsertarAdministradorSoapIn" />
+      <wsdl:output message="tns:SRSP_InsertarAdministradorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarClase">
+      <wsdl:input message="tns:SRSP_InsertarClaseSoapIn" />
+      <wsdl:output message="tns:SRSP_InsertarClaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarExperimento">
+      <wsdl:input message="tns:SRSP_InsertarExperimentoSoapIn" />
+      <wsdl:output message="tns:SRSP_InsertarExperimentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarResultado">
+      <wsdl:input message="tns:SRSP_InsertarResultadoSoapIn" />
+      <wsdl:output message="tns:SRSP_InsertarResultadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarSesion">
+      <wsdl:input message="tns:SRSP_InsertarSesionSoapIn" />
+      <wsdl:output message="tns:SRSP_InsertarSesionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarSesionxUsuario">
+      <wsdl:input message="tns:SRSP_InsertarSesionxUsuarioSoapIn" />
+      <wsdl:output message="tns:SRSP_InsertarSesionxUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarTipo">
+      <wsdl:input message="tns:SRSP_InsertarTipoSoapIn" />
+      <wsdl:output message="tns:SRSP_InsertarTipoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarUsuario">
+      <wsdl:input message="tns:SRSP_InsertarUsuarioSoapIn" />
+      <wsdl:output message="tns:SRSP_InsertarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SeleccionarInvitacionesXCorreo">
+      <wsdl:input message="tns:SRSP_SeleccionarInvitacionesXCorreoSoapIn" />
+      <wsdl:output message="tns:SRSP_SeleccionarInvitacionesXCorreoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SeleccionarInvitacionesXCorreoValues">
+      <wsdl:input message="tns:SRSP_SeleccionarInvitacionesXCorreoValuesSoapIn" />
+      <wsdl:output message="tns:SRSP_SeleccionarInvitacionesXCorreoValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SelectInvitados">
+      <wsdl:input message="tns:SRSP_SelectInvitadosSoapIn" />
+      <wsdl:output message="tns:SRSP_SelectInvitadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SesionExportarUsuarios">
+      <wsdl:input message="tns:SRSP_SesionExportarUsuariosSoapIn" />
+      <wsdl:output message="tns:SRSP_SesionExportarUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerResultado">
+      <wsdl:input message="tns:SRSP_VerResultadoSoapIn" />
+      <wsdl:output message="tns:SRSP_VerResultadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerResultadoxSesion">
+      <wsdl:input message="tns:SRSP_VerResultadoxSesionSoapIn" />
+      <wsdl:output message="tns:SRSP_VerResultadoxSesionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerificarAdministrador">
+      <wsdl:input message="tns:SRSP_VerificarAdministradorSoapIn" />
+      <wsdl:output message="tns:SRSP_VerificarAdministradorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerSesionesdeExperimento">
+      <wsdl:input message="tns:SRSP_VerSesionesdeExperimentoSoapIn" />
+      <wsdl:output message="tns:SRSP_VerSesionesdeExperimentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerUsuario">
+      <wsdl:input message="tns:SRSP_VerUsuarioSoapIn" />
+      <wsdl:output message="tns:SRSP_VerUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VisualizarExperimento5Param">
+      <wsdl:input message="tns:SRSP_VisualizarExperimento5ParamSoapIn" />
+      <wsdl:output message="tns:SRSP_VisualizarExperimento5ParamSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceLextecSoap" type="tns:WebServiceLextecSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Desmatricular_Usuario">
+      <soap:operation soapAction="http://tempuri.org/Desmatricular_Usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClases">
+      <soap:operation soapAction="http://tempuri.org/GetAllClases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTipos">
+      <soap:operation soapAction="http://tempuri.org/GetAllTipos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAdministradorFromNombre">
+      <soap:operation soapAction="http://tempuri.org/GetIdAdministradorFromNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdClaseFromNombre">
+      <soap:operation soapAction="http://tempuri.org/GetIdClaseFromNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdTipoFromNombre">
+      <soap:operation soapAction="http://tempuri.org/GetIdTipoFromNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matricular_Usuario">
+      <soap:operation soapAction="http://tempuri.org/Matricular_Usuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarAdministrador">
+      <soap:operation soapAction="http://tempuri.org/SRSP_ActualizarAdministrador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarExperimento">
+      <soap:operation soapAction="http://tempuri.org/SRSP_ActualizarExperimento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarResultado">
+      <soap:operation soapAction="http://tempuri.org/SRSP_ActualizarResultado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarSesion">
+      <soap:operation soapAction="http://tempuri.org/SRSP_ActualizarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarUsuario">
+      <soap:operation soapAction="http://tempuri.org/SRSP_ActualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarAdministrador">
+      <soap:operation soapAction="http://tempuri.org/SRSP_EliminarAdministrador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarExperimento">
+      <soap:operation soapAction="http://tempuri.org/SRSP_EliminarExperimento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarResultado">
+      <soap:operation soapAction="http://tempuri.org/SRSP_EliminarResultado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarSesion">
+      <soap:operation soapAction="http://tempuri.org/SRSP_EliminarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarUsuario">
+      <soap:operation soapAction="http://tempuri.org/SRSP_EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_FiltrarUsuariosLike">
+      <soap:operation soapAction="http://tempuri.org/SRSP_FiltrarUsuariosLike" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarAdministrador">
+      <soap:operation soapAction="http://tempuri.org/SRSP_InsertarAdministrador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarClase">
+      <soap:operation soapAction="http://tempuri.org/SRSP_InsertarClase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarExperimento">
+      <soap:operation soapAction="http://tempuri.org/SRSP_InsertarExperimento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarResultado">
+      <soap:operation soapAction="http://tempuri.org/SRSP_InsertarResultado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarSesion">
+      <soap:operation soapAction="http://tempuri.org/SRSP_InsertarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarSesionxUsuario">
+      <soap:operation soapAction="http://tempuri.org/SRSP_InsertarSesionxUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarTipo">
+      <soap:operation soapAction="http://tempuri.org/SRSP_InsertarTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarUsuario">
+      <soap:operation soapAction="http://tempuri.org/SRSP_InsertarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SeleccionarInvitacionesXCorreo">
+      <soap:operation soapAction="http://tempuri.org/SRSP_SeleccionarInvitacionesXCorreo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SeleccionarInvitacionesXCorreoValues">
+      <soap:operation soapAction="http://tempuri.org/SRSP_SeleccionarInvitacionesXCorreoValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SelectInvitados">
+      <soap:operation soapAction="http://tempuri.org/SRSP_SelectInvitados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SesionExportarUsuarios">
+      <soap:operation soapAction="http://tempuri.org/SRSP_SesionExportarUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerResultado">
+      <soap:operation soapAction="http://tempuri.org/SRSP_VerResultado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerResultadoxSesion">
+      <soap:operation soapAction="http://tempuri.org/SRSP_VerResultadoxSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerificarAdministrador">
+      <soap:operation soapAction="http://tempuri.org/SRSP_VerificarAdministrador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerSesionesdeExperimento">
+      <soap:operation soapAction="http://tempuri.org/SRSP_VerSesionesdeExperimento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerUsuario">
+      <soap:operation soapAction="http://tempuri.org/SRSP_VerUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VisualizarExperimento5Param">
+      <soap:operation soapAction="http://tempuri.org/SRSP_VisualizarExperimento5Param" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceLextecSoap12" type="tns:WebServiceLextecSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Desmatricular_Usuario">
+      <soap12:operation soapAction="http://tempuri.org/Desmatricular_Usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap12:operation soapAction="http://tempuri.org/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClases">
+      <soap12:operation soapAction="http://tempuri.org/GetAllClases" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTipos">
+      <soap12:operation soapAction="http://tempuri.org/GetAllTipos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdAdministradorFromNombre">
+      <soap12:operation soapAction="http://tempuri.org/GetIdAdministradorFromNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdClaseFromNombre">
+      <soap12:operation soapAction="http://tempuri.org/GetIdClaseFromNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdTipoFromNombre">
+      <soap12:operation soapAction="http://tempuri.org/GetIdTipoFromNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matricular_Usuario">
+      <soap12:operation soapAction="http://tempuri.org/Matricular_Usuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarAdministrador">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_ActualizarAdministrador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarExperimento">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_ActualizarExperimento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarResultado">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_ActualizarResultado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarSesion">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_ActualizarSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_ActualizarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_ActualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarAdministrador">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_EliminarAdministrador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarExperimento">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_EliminarExperimento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarResultado">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_EliminarResultado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarSesion">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_EliminarSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_EliminarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_EliminarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_FiltrarUsuariosLike">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_FiltrarUsuariosLike" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarAdministrador">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_InsertarAdministrador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarClase">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_InsertarClase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarExperimento">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_InsertarExperimento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarResultado">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_InsertarResultado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarSesion">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_InsertarSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarSesionxUsuario">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_InsertarSesionxUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarTipo">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_InsertarTipo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_InsertarUsuario">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_InsertarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SeleccionarInvitacionesXCorreo">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_SeleccionarInvitacionesXCorreo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SeleccionarInvitacionesXCorreoValues">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_SeleccionarInvitacionesXCorreoValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SelectInvitados">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_SelectInvitados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_SesionExportarUsuarios">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_SesionExportarUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerResultado">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_VerResultado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerResultadoxSesion">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_VerResultadoxSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerificarAdministrador">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_VerificarAdministrador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerSesionesdeExperimento">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_VerSesionesdeExperimento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VerUsuario">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_VerUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SRSP_VisualizarExperimento5Param">
+      <soap12:operation soapAction="http://tempuri.org/SRSP_VisualizarExperimento5Param" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceLextec">
+    <wsdl:port name="WebServiceLextecSoap" binding="tns:WebServiceLextecSoap">
+      <soap:address location="http://localhost:50000/WebServiceLextec.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceLextecSoap12" binding="tns:WebServiceLextecSoap12">
+      <soap12:address location="http://localhost:50000/WebServiceLextec.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

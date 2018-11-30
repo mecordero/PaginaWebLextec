@@ -1,0 +1,54 @@
+﻿div.light-blue {
+    height: 30px;
+}
+
+div#grid {
+    padding-left: 0px;
+    margin-left: -102px;
+}
+
+td {
+    width: 50px;
+}
+
+h1 {
+    color: #0a3152;
+    text-align: center;
+}
+
+
+.auto-style3 {
+    margin-left: 0px;
+}
+
+
+
+.auto-style4 {
+    height: 346px;
+    width: 1350px;
+    overflow: scroll;
+}
+
+
+
+.auto-style5 {
+    width: 826px;
+}
+
+#style-Calendar1 {
+    margin-left: 150px;
+}
+
+#style-Calendar2 {
+    margin-left: 540px;
+    float: left;
+}
+
+.heighttext {
+    height: 30px;
+    width: 200px;
+}
+
+.hidden {
+    display:none;
+}

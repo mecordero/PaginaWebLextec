@@ -1,0 +1,73 @@
+﻿.light-blue {
+    height: 30px;
+}
+
+#grid {
+    margin-left: -102px;
+}
+
+td {
+    width: 50px;
+}
+
+h1 {
+    color: #0a3152;
+    text-align: center;
+}
+
+.FixedHeader {
+    position: relative;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.auto-style4 {
+    height: 381px;
+    width: 1350px;
+    overflow: scroll;
+}
+
+
+
+.auto-style6 {
+    position: relative;
+    min-height: 1px;
+    top: -4px;
+    width: 37%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.form-group {
+    width: 40%;
+    height: 10%;
+}
+
+.form-group1 {
+    margin-top: -100px;
+    margin-left: 800px;
+    width: 40%;
+    height: 10%;
+}
+
+.form-group2 {
+    width: 40%;
+    height: 10%;
+}
+
+.form-group3 {
+    margin-top: -100px;
+    margin-left: 800px;
+    width: 40%;
+    height: 10%;
+}
+
+
+.auto-style7 {
+    width: 986px;
+}

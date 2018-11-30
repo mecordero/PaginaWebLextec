@@ -1,0 +1,9 @@
+﻿.oculto {
+    display: none;
+    z-index: 2;
+}
+
+.visible {
+    display: block;
+    z-index: 2;
+}

@@ -1,0 +1,137 @@
+﻿.btn_img {
+    position: absolute;
+    top: 0px;
+}
+
+#top_list ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+    #top_list ul li {
+        float: right;
+        display: block;
+        color: white;
+        padding: 0px 10px;
+        margin: 0px;
+        list-style-type: none;
+        width: auto;
+    }
+
+#top_list li a {
+    color: white;
+    text-decoration: none;
+}
+
+    #top_list li a:hover {
+        color: white;
+    }
+
+#list_menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+    #list_menu li a:hover {
+        color: blue;
+        background-color: white;
+    }
+
+.auto-style1 {
+    position: relative;
+    min-height: 1px;
+    top: -4px;
+    left: 0px;
+    width: 58.33333333%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.auto-style3 {
+    margin-left: 0px;
+}
+
+#form1 {
+    height: 294px;
+}
+
+
+header {
+    background-image: url('../Images/1.jpg');
+    background-size: cover;
+}
+
+footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #333;
+    text-align: right;
+    color: white;
+    height: 7%;
+}
+
+
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+}

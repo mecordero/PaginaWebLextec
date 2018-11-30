@@ -1,0 +1,32 @@
+Faltantes:
+
+ActualizarMensaje.aspx.cs
+-Falta todo, no encuentro como abrirla
+
+ExportarDatos.aspx.cs
+-Falta todo, no encuentro como abrirla
+
+--------------------------------------------------------------------------------
+
+Listos:
+-Home
+-HomeAdmin.Master 
+    ++ pero queda un SqlDataSource1 que no se que es ni que hace
+-Home.Master
+    ++ pero queda un SqlDataSource1 que no se que es ni que hace
+-HomeAdmin
+    ++ pero queda un SqlDataSource1 que no se que es ni que hace
+-MatriculaExperimento
+ExperimentosAdmin.aspx.cs
+    ++ experimentNamesDS tiene una conexión que no entiendo
+    ++ La parte de agregar Nueva y Nuevo en las opciones de clase y tipo no está funcionando
+-RegistroAdmin.aspx.cs
+-UsuariosAdmin
+    ++queda un SqlDataSource1 que no se que es ni que hace
+    ++tambien hay un SQLDataSource2 que si se usa pero no se como cambiar (ln 741)
+-RegistroExp.aspx.cs
+
+--------------------------------------------------------------------------------
+
+Lo que estoy haciendo (Meli):
+
